@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 
 
 
-const DoctorsCard = ({doctor}) => {
+const DoctorsCard = ({doctor, deletable, handleDelete }) => {
     const {name, education, registration_number, image,experience, id} = doctor || {};
     return (
     <div className="card bg-base-100 pt-5 shadow-sm">
@@ -28,6 +28,8 @@ const DoctorsCard = ({doctor}) => {
   to={`/doctor-details/${id}`}
   className="btn btn-primary w-full text-center">View Details
 </Link>
+
+{deletable &&  <button onClick={()=>handleDelete(id)} className='btn btn-primary w-full'>Cancel appoinment</button>}
     </div>
   </div>
 </div>

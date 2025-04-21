@@ -41,8 +41,6 @@ const router = createBrowserRouter([
           element: <DoctorDetails></DoctorDetails>,
           loader: () => fetch('doctorData.json')
         }
-
-
       ]
     },
   ]);

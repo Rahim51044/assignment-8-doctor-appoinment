@@ -10,7 +10,9 @@
       "fee": "700 BDT",
       "hospital_name": "Square Hospital, Dhaka",
       "contact_info": "+8801712345678",
-      "chamber_address": "House 15, Road 12, Dhanmondi, Dhaka"
+      "chamber_address": "House 15, Road 12, Dhanmondi, Dhaka",
+      "avaibility": ["Sunday", "Monday", "Thursday"]
+
     },
     {
       "id": 2,
@@ -23,7 +25,9 @@
       "fee": "800 BDT",
       "hospital_name": "United Hospital, Dhaka",
       "contact_info": "+8801911223344",
-      "chamber_address": "Block B, Bashundhara R/A, Dhaka"
+      "chamber_address": "Block B, Bashundhara R/A, Dhaka",
+      "avaibility": ["Sunday", "Monday", "Thursday"]
+
     },
     {
       "id": 3,
@@ -36,7 +40,9 @@
       "fee": "900 BDT",
       "hospital_name": "Labaid Specialized Hospital",
       "contact_info": "+8801755667788",
-      "chamber_address": "26 Green Road, Dhaka"
+      "chamber_address": "26 Green Road, Dhaka",
+      "avaibility": ["Sunday", "Monday", "Thursday"]
+
     },
     {
       "id": 4,
@@ -49,7 +55,9 @@
       "fee": "1000 BDT",
       "hospital_name": "National Heart Foundation",
       "contact_info": "+8801822334455",
-      "chamber_address": "Mirpur-2, Dhaka"
+      "chamber_address": "Mirpur-2, Dhaka",
+      "avaibility": ["Sunday", "Monday", "Thursday"]
+
     },
     {
       "id": 5,
@@ -62,7 +70,9 @@
       "fee": "600 BDT",
       "hospital_name": "Popular Diagnostic Center",
       "contact_info": "+8801799887766",
-      "chamber_address": "House 21, Road 2, Uttara, Dhaka"
+      "chamber_address": "House 21, Road 2, Uttara, Dhaka",
+      "avaibility": ["Sunday", "Monday", "Thursday"]
+
     },
     {
       "id": 6,
@@ -75,7 +85,9 @@
       "fee": "1200 BDT",
       "hospital_name": "BSMMU",
       "contact_info": "+8801888776655",
-      "chamber_address": "Shahbagh, Dhaka"
+      "chamber_address": "Shahbagh, Dhaka",
+      "avaibility": ["Sunday", "Monday", "Thursday"]
+
     },
     {
       "id": 7,
@@ -88,7 +100,9 @@
       "fee": "650 BDT",
       "hospital_name": "Ibn Sina Hospital",
       "contact_info": "+8801733445566",
-      "chamber_address": "Dhanmondi 9/A, Dhaka"
+      "chamber_address": "Dhanmondi 9/A, Dhaka",
+      "avaibility": ["Sunday", "Monday", "Thursday"]
+
     },
     {
       "id": 8,
@@ -101,7 +115,9 @@
       "fee": "700 BDT",
       "hospital_name": "Dhaka Shishu Hospital",
       "contact_info": "+8801966554433",
-      "chamber_address": "Shyamoli, Dhaka"
+      "chamber_address": "Shyamoli, Dhaka",
+      "avaibility": ["Sunday", "Monday", "Thursday"]
+
     },
     {
       "id": 9,
@@ -114,7 +130,9 @@
       "fee": "500 BDT",
       "hospital_name": "Bangladesh Eye Hospital",
       "contact_info": "+8801777888999",
-      "chamber_address": "Dhanmondi 27, Dhaka"
+      "chamber_address": "Dhanmondi 27, Dhaka",
+      "avaibility": ["Sunday", "Monday", "Thursday"]
+
     },
     {
       "id": 10,
@@ -127,7 +145,9 @@
       "fee": "800 BDT",
       "hospital_name": "Evercare Hospital",
       "contact_info": "+8801999887766",
-      "chamber_address": "Plot 81, Bashundhara R/A, Dhaka"
+      "chamber_address": "Plot 81, Bashundhara R/A, Dhaka",
+      "avaibility": ["Sunday", "Monday", "Thursday"]
+
     },
     {
       "id": 11,
@@ -140,7 +160,9 @@
       "fee": "600 BDT",
       "hospital_name": "National Institute of Mental Health",
       "contact_info": "+8801788776655",
-      "chamber_address": "Sher-E-Bangla Nagar, Dhaka"
+      "chamber_address": "Sher-E-Bangla Nagar, Dhaka",
+      "avaibility": ["Sunday", "Monday", "Thursday"]
+
     },
     {
       "id": 12,
@@ -153,7 +175,8 @@
       "fee": "700 BDT",
       "hospital_name": "Apollo Hospitals Dhaka",
       "contact_info": "+8801922334455",
-      "chamber_address": "Plot 81, Bashundhara R/A, Dhaka"
+      "chamber_address": "Plot 81, Bashundhara R/A, Dhaka",
+      "avaibility": ["Sunday", "Monday", "Thursday"]
     }
   ]
   
