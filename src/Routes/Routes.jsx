@@ -8,6 +8,7 @@ import Home from "../pages/Home";
 import MyBookings from "../pages/myBookings";
 import Blogs from "../pages/Blogs"
 import ContactUs from "../pages/ContactUs"
+import DoctorDetails from "../pages/DoctorDetails";
   
 
 const router = createBrowserRouter([
@@ -20,7 +21,8 @@ const router = createBrowserRouter([
             index: true,
             path: '/',
             Component: Home,
-            loader: () => fetch('doctorData.json')
+            hydrateFallbackElement: <p>Loading, please wait...</p>,
+            loader: () => fetch('../doctorData.json')
         },
         {
           path: '/my-bookings',
@@ -33,6 +35,11 @@ const router = createBrowserRouter([
         {
           path: '/contact-us',
           Component: ContactUs
+        },
+        {
+          path: '/doctor-details/:id',
+          element: <DoctorDetails></DoctorDetails>,
+          loader: () => fetch('doctorData.json')
         }
 
 

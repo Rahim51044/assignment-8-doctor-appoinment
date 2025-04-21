@@ -1,11 +1,12 @@
 import React from 'react';
 // import { FaRegistered } from "react-icons/fa";
 import { FaRegRegistered } from "react-icons/fa";
+import { Link } from 'react-router';
 
 
 
 const DoctorsCard = ({doctor}) => {
-    const {name, education, registration_number, image,experience} = doctor || {};
+    const {name, education, registration_number, image,experience, id} = doctor || {};
     return (
     <div className="card bg-base-100 pt-5 shadow-sm">
   <figure className='rounded-2xl '>
@@ -22,7 +23,11 @@ const DoctorsCard = ({doctor}) => {
     <h2 className='border-b border-dashed border-gray-400 pb-2'>{education}</h2>
     <h2 className='flex items-center gap-2'><FaRegRegistered size={20} />{registration_number}</h2>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary w-full">Buy Now</button>
+
+      <Link
+  to={`/doctor-details/${id}`}
+  className="btn btn-primary w-full text-center">View Details
+</Link>
     </div>
   </div>
 </div>
