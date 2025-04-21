@@ -5,6 +5,9 @@ import {
 import Root from "../pages/Root";
 import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home";
+import MyBookings from "../pages/myBookings";
+import Blogs from "../pages/Blogs"
+import ContactUs from "../pages/ContactUs"
   
 
 const router = createBrowserRouter([
@@ -16,8 +19,23 @@ const router = createBrowserRouter([
         {
             index: true,
             path: '/',
-            Component: Home
+            Component: Home,
+            loader: () => fetch('doctorData.json')
+        },
+        {
+          path: '/my-bookings',
+          element: <MyBookings></MyBookings>
+        },
+        {
+          path: '/blogs',
+          Component: Blogs
+        },
+        {
+          path: '/contact-us',
+          Component: ContactUs
         }
+
+
       ]
     },
   ]);
