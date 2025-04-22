@@ -9,6 +9,7 @@ import MyBookings from "../pages/myBookings";
 import Blogs from "../pages/Blogs"
 import ContactUs from "../pages/ContactUs"
 import DoctorDetails from "../pages/DoctorDetails";
+import { Cell } from "recharts";
   
 
 const router = createBrowserRouter([
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/my-bookings',
-          element: <MyBookings></MyBookings>
+          element: <MyBookings></MyBookings>         
         },
         {
           path: '/blogs',
@@ -40,7 +41,9 @@ const router = createBrowserRouter([
           path: '/doctor-details/:id',
           element: <DoctorDetails></DoctorDetails>,
           loader: () => fetch('doctorData.json')
-        }
+        },
+       
+        
       ]
     },
   ]);

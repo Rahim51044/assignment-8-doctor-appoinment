@@ -3,6 +3,7 @@ import Banner from '../components/Banner';
 import { useLoaderData } from 'react-router';
 import DoctorsContainer from './DoctorsContainer';
 
+
 const Home = () => {
     const data = useLoaderData();
     console.log(data);

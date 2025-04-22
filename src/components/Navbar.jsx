@@ -32,6 +32,7 @@ const Navbar = () => {
     >
       Blogs
     </NavLink></li>
+    
     <li className='m-2'>    
       <NavLink
       to="/contact"
@@ -42,6 +43,7 @@ const Navbar = () => {
       Contact Us
     </NavLink></li>
     </>
+
     return (
 <div className="navbar bg-gray-200 px-20  ">
   <div className="navbar-start">

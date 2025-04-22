@@ -1,6 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import DoctorsCard from '../components/DoctorsCard';
 import { getFavorites, removeFavorites } from '../utils';
+import Booking from './Booking';
+import { Bar, BarChart, CartesianGrid, Cell, Tooltip, XAxis, YAxis } from 'recharts';
+
+const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
+
+
+
+const getPath = (x, y, width, height) => {
+    return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}
+    ${x + width / 2}, ${y}
+    C${x + width / 2},${y + height / 3} ${x + (2 * width) / 3},${y + height} ${x + width}, ${y + height}
+    Z`;
+  };
+
+  const TriangleBar = ({ x, y, width, height, fill }) => {
+    return (
+      <path
+        d={`
+          M${x},${y + height}
+          C${x + width / 3},${y + height}
+           ${x + width / 2},${y + height / 3}
+           ${x + width / 2},${y}
+          C${x + width / 2},${y + height / 3}
+           ${x + (2 * width) / 3},${y + height}
+           ${x + width},${y + height}
+          Z
+        `}
+        stroke="black"
+        fill={fill}
+      />
+    );
+  };
 
 const MyBookings = () => {
         const [displayDoctors, setDisplayDoctors] = useState([]);
@@ -10,15 +42,49 @@ const MyBookings = () => {
         },[])
 
         const handleDelete = (id) => {
-            
             removeFavorites(id)
             setDisplayDoctors(getFavorites())
         }
+        const {name, fee} = MyBookings || {}
+        const chartData = displayDoctors.map((doctor) => ({
+            name: doctor.name,
+            fee: (doctor.fee),
+          }));
     return (
         <div className='py-12 px-20'>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8'>
-            {
+                 {chartData.length > 0 && (
+        <BarChart
+        width={1000}
+        height={500}
+        data={chartData}
+        margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+      >
+        <CartesianGrid strokeDasharray="5 5" />
+        <XAxis dataKey="name" />
+        <YAxis  />
+        <Tooltip />
+        <Bar
+          dataKey="fee"
+          shape={<TriangleBar />}
+          label={{ position: "top" }}
+        >
+          {chartData.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+          ))}
+        </Bar>
+      </BarChart>
+      )}
+
+
+
+                <h1 className='text-3xl font-bold text-center'>My Today Appointments</h1>
+                <p className='text-center'>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.</p>
+            <div className=' mb-8 bg-white p-8 rounded-2xl space-y-8'>
+            {/* {
                 displayDoctors.map((doctor)=> <DoctorsCard key={doctor.id} doctor={doctor} deletable={true} handleDelete={handleDelete}></DoctorsCard>)
+            } */}
+            {
+                displayDoctors.map((booking)=><Booking key={booking.id} booking={booking} deletable={true} handleDelete={handleDelete} ></Booking>)
             }
             </div>
         </div>
